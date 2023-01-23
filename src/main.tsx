@@ -1,9 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { App } from './App'
+import { ToastifyProvider } from './contexts/openToastify'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <ToastifyProvider>
+      <App />
+    </ToastifyProvider>
   </React.StrictMode>,
 )
